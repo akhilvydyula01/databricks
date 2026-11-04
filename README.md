@@ -11,10 +11,10 @@ Databricks + Gen AI learning workspace.
 |------|-------------|
 | [`gen-ai/`](./gen-ai/) | Open-source Generative AI learning path |
 | [`gen-ai/basic/`](./gen-ai/basic/) | Beginner: LLM hello-world, chatbot, tiny RAG |
-| [`gen-ai/intermediate/`](./gen-ai/intermediate/) | Intermediate (coming soon) |
-| [`gen-ai/advanced/`](./gen-ai/advanced/) | Advanced (coming soon) |
+| [`gen-ai/intermediate/`](./gen-ai/intermediate/) | Intermediate: FAISS RAG, tool agent, eval |
+| [`gen-ai/advanced/`](./gen-ai/advanced/) | Advanced: LoRA, multi-agent, production RAG |
 
-## Quick start (basic Gen AI)
+## Quick start
 
 ```bash
 cd gen-ai/basic
