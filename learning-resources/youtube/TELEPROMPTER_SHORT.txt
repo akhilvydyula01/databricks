@@ -1,0 +1,23 @@
+Welcome. Today we build a complete retail data warehouse in Databricks for NovaMart.
+
+This project uses Bronze, Silver, and Gold — the medallion architecture — and finishes with a star schema analysts can query.
+
+Open the public repo: github.com/akhilvydyula01/databricks
+In Databricks, add it as a Git folder, Pull, and open projects/data-warehouse/notebooks.
+
+Notebook 00 explains architecture.
+Notebook 01 creates schema retail_dwh and sample files.
+Notebook 02 lands Bronze tables with lineage columns. We do not clean business rules yet.
+Notebook 03 creates Silver: cast types, dedupe, and reject bad amounts into a reject table.
+Notebook 04 builds Gold: dim_date, dim_customer, dim_product, dim_store, and fact_sales.
+The fact grain is one order.
+
+Notebook 05 shows SCD Type 2. When a customer moves cities, we keep history with valid_from, valid_to, and is_current.
+Notebook 06 runs quality checks so bad data never quietly reaches dashboards.
+Notebook 07 is the payoff: revenue by month, top products, store performance, and segment contribution.
+
+In production, turn this into a Databricks Job.
+For homework, students add a Returns pipeline.
+
+If this helped, clone the repo, run the notebooks, like and subscribe, and tell me if you want Part 2 on Jobs and dashboards.
+Thanks for watching.

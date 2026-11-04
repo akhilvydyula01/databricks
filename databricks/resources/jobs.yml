@@ -5,7 +5,7 @@ resources:
       tasks:
         - task_key: hello_llm
           notebook_task:
-            notebook_path: ../notebooks/gen_ai/basic/01_hello_llm
+            notebook_path: ../../projects/gen-ai/notebooks/basic/01_hello_llm
           new_cluster:
             spark_version: 14.3.x-cpu-ml-scala2.12
             node_type_id: i3.xlarge
@@ -21,7 +21,7 @@ resources:
       tasks:
         - task_key: faiss_rag
           notebook_task:
-            notebook_path: ../notebooks/gen_ai/intermediate/01_faiss_rag
+            notebook_path: ../../projects/gen-ai/notebooks/intermediate/01_faiss_rag
           new_cluster:
             spark_version: 14.3.x-cpu-ml-scala2.12
             node_type_id: i3.xlarge
@@ -37,7 +37,7 @@ resources:
       tasks:
         - task_key: multi_agent
           notebook_task:
-            notebook_path: ../notebooks/gen_ai/advanced/02_multi_agent
+            notebook_path: ../../projects/gen-ai/notebooks/advanced/02_multi_agent
           new_cluster:
             spark_version: 14.3.x-cpu-ml-scala2.12
             node_type_id: i3.xlarge
@@ -66,40 +66,40 @@ resources:
         - task_key: setup
           job_cluster_key: retail_dwh_cluster
           notebook_task:
-            notebook_path: ../../notebooks/data_warehouse/01_setup_and_sample_data
+            notebook_path: ../../projects/data-warehouse/notebooks/01_setup_and_sample_data
         - task_key: bronze
           depends_on:
             - task_key: setup
           job_cluster_key: retail_dwh_cluster
           notebook_task:
-            notebook_path: ../../notebooks/data_warehouse/02_bronze_ingestion
+            notebook_path: ../../projects/data-warehouse/notebooks/02_bronze_ingestion
         - task_key: silver
           depends_on:
             - task_key: bronze
           job_cluster_key: retail_dwh_cluster
           notebook_task:
-            notebook_path: ../../notebooks/data_warehouse/03_silver_transform
+            notebook_path: ../../projects/data-warehouse/notebooks/03_silver_transform
         - task_key: gold
           depends_on:
             - task_key: silver
           job_cluster_key: retail_dwh_cluster
           notebook_task:
-            notebook_path: ../../notebooks/data_warehouse/04_gold_star_schema
+            notebook_path: ../../projects/data-warehouse/notebooks/04_gold_star_schema
         - task_key: scd2
           depends_on:
             - task_key: gold
           job_cluster_key: retail_dwh_cluster
           notebook_task:
-            notebook_path: ../../notebooks/data_warehouse/05_scd2_customers
+            notebook_path: ../../projects/data-warehouse/notebooks/05_scd2_customers
         - task_key: quality
           depends_on:
             - task_key: scd2
           job_cluster_key: retail_dwh_cluster
           notebook_task:
-            notebook_path: ../../notebooks/data_warehouse/06_data_quality
+            notebook_path: ../../projects/data-warehouse/notebooks/06_data_quality
         - task_key: analytics
           depends_on:
             - task_key: quality
           job_cluster_key: retail_dwh_cluster
           notebook_task:
-            notebook_path: ../../notebooks/data_warehouse/07_analytics_sql
+            notebook_path: ../../projects/data-warehouse/notebooks/07_analytics_sql
