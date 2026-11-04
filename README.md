@@ -1,6 +1,6 @@
 # databricks
 
-Databricks + Gen AI learning workspace (public).
+Public teaching workspace for **Gen AI** and a full **Retail Data Warehouse** on Databricks.
 
 - **Workspace:** https://dbc-37e2a2e8-2739.cloud.databricks.com/?o=7474649764679022
 - **GitHub:** https://github.com/akhilvydyula01/databricks
@@ -9,13 +9,22 @@ Databricks + Gen AI learning workspace (public).
 
 | Path | Description |
 |------|-------------|
+| [`data-warehouse/`](./data-warehouse/) | Retail DWH teaching project + YouTube guide |
+| [`notebooks/data_warehouse/`](./notebooks/data_warehouse/) | DWH Databricks notebooks (00→08) |
 | [`gen-ai/`](./gen-ai/) | Local Python Gen AI learning path |
-| [`gen-ai/basic/`](./gen-ai/basic/) | Beginner scripts |
-| [`gen-ai/intermediate/`](./gen-ai/intermediate/) | Intermediate scripts |
-| [`gen-ai/advanced/`](./gen-ai/advanced/) | Advanced scripts |
-| [`databricks/`](./databricks/) | Databricks notebooks + Asset Bundle |
+| [`notebooks/gen_ai/`](./notebooks/gen_ai/) | Gen AI Databricks notebooks |
+| [`databricks/`](./databricks/) | Asset Bundle config |
 
-## Local quick start
+## YouTube / classroom: Data Warehouse
+
+1. Workspace → **Repos** → Add Git folder → `https://github.com/akhilvydyula01/databricks`
+2. **Pull** latest
+3. Open **`notebooks/data_warehouse/00_architecture_overview`**
+4. Attach a cluster → run notebooks **00 → 08**
+
+Presenter script: [`data-warehouse/YOUTUBE_TEACHING_GUIDE.md`](./data-warehouse/YOUTUBE_TEACHING_GUIDE.md)
+
+## Gen AI quick start
 
 ```bash
 cd gen-ai/basic
@@ -24,14 +33,3 @@ python -m venv .venv
 pip install -r requirements.txt
 python 01_hello_llm.py
 ```
-
-## Databricks quick start
-
-1. In the workspace: **Repos / Git folders → Add Repo**
-2. URL: `https://github.com/akhilvydyula01/databricks`
-3. **Pull** latest if the folder already exists
-4. Open **`notebooks/gen_ai/basic/01_hello_llm`**
-5. Attach an ML runtime cluster → **Run all**
-
-Full find-path guide: [`notebooks/README.md`](./notebooks/README.md)  
-Asset Bundle docs: [`databricks/README.md`](./databricks/README.md)

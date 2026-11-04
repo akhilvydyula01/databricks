@@ -8,11 +8,13 @@ Workspace
     └── <your-email-or-user>
         └── databricks
             └── notebooks
+                ├── data_warehouse     ← retail DWH course (start here for YouTube)
+                │   ├── 00_architecture_overview
+                │   ├── 01_setup_and_sample_data
+                │   ├── ...
+                │   └── 08_end_to_end_pipeline
                 └── gen_ai
                     ├── basic
-                    │   ├── 01_hello_llm
-                    │   ├── 02_simple_chatbot
-                    │   └── 03_tiny_rag
                     ├── intermediate
                     └── advanced
 ```
