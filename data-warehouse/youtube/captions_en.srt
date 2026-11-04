@@ -1,0 +1,55 @@
+1
+00:00:00,000 --> 00:00:06,000
+Welcome — today we build a complete retail data warehouse in Databricks for NovaMart.
+
+2
+00:00:06,000 --> 00:00:14,000
+This open-source project takes you from raw files to analytics-ready Gold tables.
+
+3
+00:00:14,000 --> 00:00:22,000
+We use medallion architecture: Bronze for raw, Silver for trusted, Gold for star schema.
+
+4
+00:00:22,000 --> 00:00:30,000
+Clone github.com/akhilvydyula01/databricks and open notebooks/data_warehouse.
+
+5
+00:00:30,000 --> 00:00:40,000
+In Databricks Repos, add the Git folder, Pull latest, and attach a cluster.
+
+6
+00:00:40,000 --> 00:00:52,000
+Notebook 01 creates schema retail_dwh and sample customers, products, stores, and orders.
+
+7
+00:00:52,000 --> 00:01:04,000
+Notebook 02 lands Bronze tables as-is, with lineage columns like ingested_at.
+
+8
+00:01:04,000 --> 00:01:18,000
+Notebook 03 builds Silver: cast types, dedupe orders, and quarantine invalid amounts.
+
+9
+00:01:18,000 --> 00:01:32,000
+Notebook 04 creates Gold dimensions and gold_fact_sales in a star schema.
+
+10
+00:01:32,000 --> 00:01:46,000
+Notebook 05 demonstrates SCD Type 2 so customer city and segment history is preserved.
+
+11
+00:01:46,000 --> 00:01:58,000
+Notebook 06 runs data quality gates before publishing analytics.
+
+12
+00:01:58,000 --> 00:02:12,000
+Notebook 07 answers business questions: revenue by month, top products, store performance.
+
+13
+00:02:12,000 --> 00:02:24,000
+Next, schedule it as a Databricks Job and try the student Returns assignment.
+
+14
+00:02:24,000 --> 00:02:35,000
+Thanks for watching — like, subscribe, and build this in your own workspace.
