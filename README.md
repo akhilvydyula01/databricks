@@ -15,6 +15,11 @@ Public teaching workspace for **Gen AI** and a full **Retail Data Warehouse** on
 | [`notebooks/gen_ai/`](./notebooks/gen_ai/) | Gen AI Databricks notebooks |
 | [`databricks/`](./databricks/) | Asset Bundle config |
 
+## Student PDF (print / share in class)
+
+**[docs/student-guide/Databricks_Student_Project_Guide.pdf](./docs/student-guide/Databricks_Student_Project_Guide.pdf)**  
+Includes architecture images for medallion, star schema, SCD2, and the full project map.
+
 ## YouTube / classroom: Data Warehouse
 
 1. Workspace → **Repos** → Add Git folder → `https://github.com/akhilvydyula01/databricks`
