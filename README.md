@@ -29,7 +29,9 @@ python 01_hello_llm.py
 
 1. In the workspace: **Repos / Git folders → Add Repo**
 2. URL: `https://github.com/akhilvydyula01/databricks`
-3. Open `databricks/notebooks/gen_ai/basic/01_hello_llm`
-4. Attach an ML runtime cluster and run all
+3. **Pull** latest if the folder already exists
+4. Open **`notebooks/gen_ai/basic/01_hello_llm`**
+5. Attach an ML runtime cluster → **Run all**
 
-See [`databricks/README.md`](./databricks/README.md) for Asset Bundle deploy steps.
+Full find-path guide: [`notebooks/README.md`](./notebooks/README.md)  
+Asset Bundle docs: [`databricks/README.md`](./databricks/README.md)
