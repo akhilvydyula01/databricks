@@ -37,7 +37,17 @@ Fictional retailer **NovaMart**:
 | 07 | `07_analytics_sql` | Business questions + KPIs | 10–12 min |
 | 08 | `08_end_to_end_pipeline` | One-click full refresh demo | 5–8 min |
 
-Full presenter script: [`YOUTUBE_TEACHING_GUIDE.md`](./YOUTUBE_TEACHING_GUIDE.md)
+## Teaching materials
+
+| File | Use |
+|------|-----|
+| [`YOUTUBE_TEACHING_GUIDE.md`](./YOUTUBE_TEACHING_GUIDE.md) | Full 70–90 min course script |
+| [`YOUTUBE_20MIN_DEMO.md`](./YOUTUBE_20MIN_DEMO.md) | Short high-retention demo cut |
+| [`STUDENT_ASSIGNMENT.md`](./STUDENT_ASSIGNMENT.md) | Homework + rubric (Returns challenge) |
+| [`jobs/retail_dwh_pipeline_job.json`](./jobs/retail_dwh_pipeline_job.json) | Importable Databricks Job |
+| [`jobs/HOW_TO_CREATE_JOB.md`](./jobs/HOW_TO_CREATE_JOB.md) | Job setup steps for class/video |
+
+Fast recording notebook: `notebooks/data_warehouse/09_youtube_20min_runner`
 
 ## How to open in Databricks
 

@@ -22,7 +22,10 @@ Public teaching workspace for **Gen AI** and a full **Retail Data Warehouse** on
 3. Open **`notebooks/data_warehouse/00_architecture_overview`**
 4. Attach a cluster → run notebooks **00 → 08**
 
-Presenter script: [`data-warehouse/YOUTUBE_TEACHING_GUIDE.md`](./data-warehouse/YOUTUBE_TEACHING_GUIDE.md)
+- Full script: [`data-warehouse/YOUTUBE_TEACHING_GUIDE.md`](./data-warehouse/YOUTUBE_TEACHING_GUIDE.md)
+- 20-min demo: [`data-warehouse/YOUTUBE_20MIN_DEMO.md`](./data-warehouse/YOUTUBE_20MIN_DEMO.md)
+- Student assignment: [`data-warehouse/STUDENT_ASSIGNMENT.md`](./data-warehouse/STUDENT_ASSIGNMENT.md)
+- Job JSON: [`data-warehouse/jobs/`](./data-warehouse/jobs/)
 
 ## Gen AI quick start
 

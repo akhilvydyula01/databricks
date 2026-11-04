@@ -47,3 +47,59 @@ resources:
               spark.master: "local[*]"
             custom_tags:
               ResourceClass: SingleNode
+
+    retail_dwh_pipeline:
+      name: "[dev] NovaMart Retail DWH Pipeline"
+      job_clusters:
+        - job_cluster_key: retail_dwh_cluster
+          new_cluster:
+            spark_version: 14.3.x-scala2.12
+            node_type_id: i3.xlarge
+            num_workers: 0
+            spark_conf:
+              spark.databricks.cluster.profile: singleNode
+              spark.master: "local[*]"
+            custom_tags:
+              ResourceClass: SingleNode
+              project: retail_dwh
+      tasks:
+        - task_key: setup
+          job_cluster_key: retail_dwh_cluster
+          notebook_task:
+            notebook_path: ../../notebooks/data_warehouse/01_setup_and_sample_data
+        - task_key: bronze
+          depends_on:
+            - task_key: setup
+          job_cluster_key: retail_dwh_cluster
+          notebook_task:
+            notebook_path: ../../notebooks/data_warehouse/02_bronze_ingestion
+        - task_key: silver
+          depends_on:
+            - task_key: bronze
+          job_cluster_key: retail_dwh_cluster
+          notebook_task:
+            notebook_path: ../../notebooks/data_warehouse/03_silver_transform
+        - task_key: gold
+          depends_on:
+            - task_key: silver
+          job_cluster_key: retail_dwh_cluster
+          notebook_task:
+            notebook_path: ../../notebooks/data_warehouse/04_gold_star_schema
+        - task_key: scd2
+          depends_on:
+            - task_key: gold
+          job_cluster_key: retail_dwh_cluster
+          notebook_task:
+            notebook_path: ../../notebooks/data_warehouse/05_scd2_customers
+        - task_key: quality
+          depends_on:
+            - task_key: scd2
+          job_cluster_key: retail_dwh_cluster
+          notebook_task:
+            notebook_path: ../../notebooks/data_warehouse/06_data_quality
+        - task_key: analytics
+          depends_on:
+            - task_key: quality
+          job_cluster_key: retail_dwh_cluster
+          notebook_task:
+            notebook_path: ../../notebooks/data_warehouse/07_analytics_sql
