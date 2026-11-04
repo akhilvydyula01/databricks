@@ -42,3 +42,5 @@ python 02_multi_agent.py
 ```
 
 Databricks workspace: https://dbc-37e2a2e8-2739.cloud.databricks.com/?o=7474649764679022
+
+Databricks notebook versions live in [`../databricks/notebooks/gen_ai/`](../databricks/notebooks/gen_ai/).

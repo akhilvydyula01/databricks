@@ -1,0 +1,21 @@
+# Databricks Asset Bundle — Gen AI learning path
+bundle:
+  name: genai-learning
+
+workspace:
+  host: https://dbc-37e2a2e8-2739.cloud.databricks.com
+
+include:
+  - resources/*.yml
+
+targets:
+  dev:
+    mode: development
+    default: true
+    workspace:
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}
+
+  prod:
+    mode: production
+    workspace:
+      root_path: /Workspace/Shared/.bundle/${bundle.name}/${bundle.target}

@@ -1,0 +1,49 @@
+resources:
+  jobs:
+    genai_basic_hello:
+      name: "[dev] genai basic hello llm"
+      tasks:
+        - task_key: hello_llm
+          notebook_task:
+            notebook_path: ../notebooks/gen_ai/basic/01_hello_llm
+          new_cluster:
+            spark_version: 14.3.x-cpu-ml-scala2.12
+            node_type_id: i3.xlarge
+            num_workers: 0
+            spark_conf:
+              spark.databricks.cluster.profile: singleNode
+              spark.master: "local[*]"
+            custom_tags:
+              ResourceClass: SingleNode
+
+    genai_intermediate_faiss:
+      name: "[dev] genai intermediate faiss rag"
+      tasks:
+        - task_key: faiss_rag
+          notebook_task:
+            notebook_path: ../notebooks/gen_ai/intermediate/01_faiss_rag
+          new_cluster:
+            spark_version: 14.3.x-cpu-ml-scala2.12
+            node_type_id: i3.xlarge
+            num_workers: 0
+            spark_conf:
+              spark.databricks.cluster.profile: singleNode
+              spark.master: "local[*]"
+            custom_tags:
+              ResourceClass: SingleNode
+
+    genai_advanced_multi_agent:
+      name: "[dev] genai advanced multi agent"
+      tasks:
+        - task_key: multi_agent
+          notebook_task:
+            notebook_path: ../notebooks/gen_ai/advanced/02_multi_agent
+          new_cluster:
+            spark_version: 14.3.x-cpu-ml-scala2.12
+            node_type_id: i3.xlarge
+            num_workers: 0
+            spark_conf:
+              spark.databricks.cluster.profile: singleNode
+              spark.master: "local[*]"
+            custom_tags:
+              ResourceClass: SingleNode
